@@ -6,7 +6,6 @@ package part1.task6;
 public class Task6 {
     public static void main(String[] args) {
         int sum = 0;
-        //double [] n = generateNums (20);
         double [] n = {3, 7, 1, 5, 2, 10, 1, 3 , 5 ,9 ,5 , 7 , 6 ,7, 3 ,2 ,5, 1};
         boolean [] primeIndex = findPrimeIndex(n.length);
         for (int i=0; i<n.length; i++){
