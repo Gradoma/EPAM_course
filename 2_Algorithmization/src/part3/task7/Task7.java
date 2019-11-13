@@ -39,7 +39,6 @@ public class Task7 {
         }
 //        for (int j=a.length; j<newSeq.length; j++){       //Insertion sort
 //            for (int k=j; k>0)
-        }
         return newSeq;
     }
 }
