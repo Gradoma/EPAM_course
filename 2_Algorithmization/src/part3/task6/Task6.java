@@ -9,7 +9,7 @@ import java.util.Arrays;
 
 public class Task6 {
     public static void main(String[] args) {
-        int n = 7;
+        int n = 77;
         int [] a = generateSeq(n);
         System.out.println("Basic array: ");
         System.out.println(Arrays.toString(a));
@@ -28,11 +28,15 @@ public class Task6 {
     }
 
     private static int [] sortShell (int [] array){
-        for (int i=1; i<array.length; i++){
-            for (int j=i; j>0; j--){
-                if (array[j]<array[j-1]){
-                    swap(array, j-1, j);
+        int i=1;
+        while (i<array.length){
+            if (array[i]<array[i-1]){
+                swap(array, i-1, i);
+                if (i>1){
+                    i--;
                 }
+            } else {
+                i++;
             }
         }
         return array;

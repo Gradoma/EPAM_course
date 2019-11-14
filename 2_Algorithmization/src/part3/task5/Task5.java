@@ -43,33 +43,4 @@ public class Task5 {
         }
         return left;
     }
-
-//    private static void binarySearch(int[] array) {
-//        for (int i = 1; i < array.length; i++) {
-//            int temp = array[i];
-//            int left = 0;
-//            int right = i - 1;
-//            System.out.println("Temp = "  + temp);
-//            System.out.println("Start left, right = " + left + " " + right);
-//            if (temp < array[i - 1]) {
-//                while (left<right) {
-//                    int mid = left + (right - left) / 2;
-//                    System.out.println("mid= " + mid);
-//                    if (temp < array[mid]) {
-//                        right = mid;
-//                    } else {
-//                        left = mid + 1;
-//                    }
-//                    System.out.println("left, right = " + left + " " + right);
-//                }
-//                for (int j = i; j > left; j--) {
-//                    array[j] = array[j - 1];
-//                }
-//                array[left] = temp;
-//                System.out.println(Arrays.toString(array));
-//            }
-//        }
-//        System.out.println(Arrays.toString(array));
-//    }
-
 }
