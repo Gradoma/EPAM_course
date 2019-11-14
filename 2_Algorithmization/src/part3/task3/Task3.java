@@ -11,7 +11,9 @@ public class Task3 {
     public static void main(String[] args) {
         int n = 12;
         int [] a = generateSeq(n);
+        System.out.println("Basic sequence: ");
         System.out.println(Arrays.toString(a));
+        System.out.println("Sorted sequence: ");
         sortSelection(a);
         System.out.println(Arrays.toString(a));
     }

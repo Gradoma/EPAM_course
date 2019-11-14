@@ -13,8 +13,11 @@ public class Task2 {
         int [] a = generateSeq(n);
         int [] b = generateSeq(m);
 
+        System.out.println("Basic sequence a: ");
         System.out.println(Arrays.toString(a));
+        System.out.println("Basic sequence b: ");
         System.out.println(Arrays.toString(b));
+        System.out.println("Combined sequence a: ");
         System.out.println(Arrays.toString(combineSeq(a, b)));
 
     }

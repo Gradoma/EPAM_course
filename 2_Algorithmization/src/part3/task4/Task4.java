@@ -16,7 +16,7 @@ public class Task4 {
         System.out.println(Arrays.toString(a));
         System.out.println("Sorted array: ");
         System.out.println(Arrays.toString(sortBubble(a)));
-        System.out.println("Number of excanges: " + counter);
+        System.out.println("Number of exchanges: " + counter);
     }
 
     private static int [] generateSeq(int size){

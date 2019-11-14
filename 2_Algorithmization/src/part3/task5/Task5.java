@@ -11,34 +11,65 @@ import java.util.Arrays;
 
 public class Task5 {
     public static void main(String[] args) {
-        int[] a = {1, 3, 4, 7, 8, 9, 10, 5, 2, 12};
+        int[] a = {1, 3, 4, 7, 8, 9, 10, 2, 5, 12 };
         System.out.println("Sorted array: ");
-        binarySearch(a);
+        System.out.println(Arrays.toString(sortInsertion(a)));
     }
 
-    private static void binarySearch(int[] array) {
+    private static int [] sortInsertion (int [] array){
         for (int i = 1; i < array.length; i++) {
-            int temp = array[i];
-            int left = 0;
-            int right = i - 1;
-            System.out.println("Start left, right = " + left + " " + right);
-            if (temp < array[i - 1]) {
-                while (Math.abs(left - right) > 1) {
-                    int mid = (left + (right - left)) / 2;
-                    System.out.println("mid= " + mid);
-                    if (temp < array[mid]) {
-                        right = mid;
-                    } else {
-                        left = mid + 1;
-                    }
-                    System.out.println("left, right = " + left + " " + right);
-                }
-                for (int j = i; j > left; j--) {
+            if (array [i] < array [i-1]){
+                int temp = array [i];
+                int index = binarySearchIndex (array, temp, i);
+                for (int j = i; j > index; j--) {
                     array[j] = array[j - 1];
                 }
-                array[left + 1] = temp;
+                array[index] = temp;
             }
         }
-        System.out.println(Arrays.toString(array));
+        return array;
     }
+
+    private static int binarySearchIndex (int [] array, int key, int i){
+        int left = 0;
+        int right = i - 1;
+        while (left<right) {
+            int mid = left + (right - left) / 2;
+            if (key < array[mid]) {
+                right = mid;
+            } else {
+                left = mid + 1;
+            }
+        }
+        return left;
+    }
+
+//    private static void binarySearch(int[] array) {
+//        for (int i = 1; i < array.length; i++) {
+//            int temp = array[i];
+//            int left = 0;
+//            int right = i - 1;
+//            System.out.println("Temp = "  + temp);
+//            System.out.println("Start left, right = " + left + " " + right);
+//            if (temp < array[i - 1]) {
+//                while (left<right) {
+//                    int mid = left + (right - left) / 2;
+//                    System.out.println("mid= " + mid);
+//                    if (temp < array[mid]) {
+//                        right = mid;
+//                    } else {
+//                        left = mid + 1;
+//                    }
+//                    System.out.println("left, right = " + left + " " + right);
+//                }
+//                for (int j = i; j > left; j--) {
+//                    array[j] = array[j - 1];
+//                }
+//                array[left] = temp;
+//                System.out.println(Arrays.toString(array));
+//            }
+//        }
+//        System.out.println(Arrays.toString(array));
+//    }
+
 }
