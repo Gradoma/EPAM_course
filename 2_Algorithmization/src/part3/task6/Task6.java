@@ -9,7 +9,7 @@ import java.util.Arrays;
 
 public class Task6 {
     public static void main(String[] args) {
-        int n = 77;
+        int n = 7;
         int [] a = generateSeq(n);
         System.out.println("Basic array: ");
         System.out.println(Arrays.toString(a));
