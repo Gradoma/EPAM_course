@@ -1,6 +1,6 @@
 package part3.task8;
 
-public class FractionLogic {
+class FractionLogic {
 
     public Fraction[] sortFractions (Fraction [] array){
         convertFraction(array, findCommonDenominator(array));
