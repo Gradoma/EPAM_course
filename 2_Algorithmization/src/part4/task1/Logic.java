@@ -30,18 +30,15 @@ public class Logic {
         return lcm;
     }
 
-    private int findGcd (int min, int max){
-        int i = 1;
-        int gcd=1;
-
-        while (i <= min){
-            if (min % i == 0 & max % i == 0){
-                gcd = i;
+    private int findGcd (int first, int second){
+        while (first != second){
+            if (first > second){
+                first = first - second;
+            } else {
+                second = second - first;
             }
-            i++;
-
         }
-        return gcd;
+        return first;
     }
 
     void printResult (){
