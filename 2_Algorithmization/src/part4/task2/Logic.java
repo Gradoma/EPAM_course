@@ -10,9 +10,6 @@ public class Logic {
     Logic(int [] nums){
         array = new int[nums.length];
         for (int j=0; j<nums.length; j++) {
-            if (nums[j] == 0){
-                throw new IllegalArgumentException();
-            }
             array[j] = Math.abs(nums[j]);
         }
     }
