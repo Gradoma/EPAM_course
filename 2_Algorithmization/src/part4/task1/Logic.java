@@ -11,7 +11,6 @@ public class Logic {
         min = Math.min(first, second);
         lcm = findLcm(min, max);
         gcd = findGcd(min, max);
-        printResult(lcm, gcd);
     }
 
     private int findLcm (int min, int max){
@@ -45,7 +44,7 @@ public class Logic {
         return gcd;
     }
 
-    private void printResult (int lcm, int gcd){
+    void printResult (){
         System.out.println("LCM = " + lcm);
         System.out.println("GCD = " + gcd);
         System.out.println(lcm + " = (" + max + "*" + min + ") / " + gcd);
