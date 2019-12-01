@@ -16,7 +16,6 @@ public class Task16 {
         int sum = 0;
         for (int i = findMinNumber(n); i<findMaxNumber(n); i += 2){
             if (checkNumber(i)){
-                System.out.println(i);
                 sum += i;
             }
         }
