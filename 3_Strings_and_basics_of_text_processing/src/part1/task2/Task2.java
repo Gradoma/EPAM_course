@@ -7,11 +7,7 @@ public class Task2 {
 
     public static void main(String[] args) {
         Task2 task2 = new Task2();
-        task2.replaceAll("word", "letter");
-    }
-
-    private void replaceAll (String target, String replacement){
         Logic logic = new Logic();
-        System.out.println(logic.findAndReplace(example, target, replacement));
+        System.out.println(logic.findAndReplace(task2.example, "word", "letter"));
     }
 }
