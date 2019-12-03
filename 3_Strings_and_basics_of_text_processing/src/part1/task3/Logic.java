@@ -1,7 +1,7 @@
 package part1.task3;
 
 public class Logic {
-    int countAllNumerals (String str){
+    int findAllNumerals (String str){
         int counter = 0;
         char[] strChar = str.toCharArray();
         for (int i=0; i<str.length(); i++){

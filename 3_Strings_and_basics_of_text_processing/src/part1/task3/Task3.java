@@ -8,6 +8,6 @@ public class Task3 {
     public static void main(String[] args) {
         Task3 task3 = new Task3();
         Logic logic = new Logic();
-        System.out.println("Numerals in string: " + logic.countAllNumerals(task3.example));
+        System.out.println("Numerals in string: " + logic.findAllNumerals(task3.example));
     }
 }
