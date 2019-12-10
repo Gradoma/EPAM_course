@@ -2,8 +2,9 @@ package part1.task5;
 
 public class Logic {
 
-    String replaceExtraSpaces (String str){
+    String removeExtraSpaces (String str){
         char[] strChar = str.toCharArray();
+        strChar = removeSideSpaces(strChar);
         int[] extraChars = findExtraSpaces(strChar);
         char [] newStrChar = new char[strChar.length - extraChars.length];
         int j = 0;
@@ -64,6 +65,33 @@ public class Logic {
             i++;
         }
         return counter;
+    }
+
+    private char[] removeSideSpaces (char [] chars){
+        int left = 0;
+        boolean isLeftSpaces = true;
+        int right = 0;
+        boolean isRightSpaces = true;
+        while (isLeftSpaces | isRightSpaces){
+            if (chars[left] == ' '){
+                left++;
+            } else {
+                isLeftSpaces = false;
+            }
+
+            if (chars[(chars.length-1)-right] == ' '){
+                right++;
+            } else {
+                isRightSpaces = false;
+            }
+        }
+        char[] charsWithoutSides = new char[chars.length - right - left];
+        int j = 0;
+        for (int i=left; i<chars.length-right; i++){
+            charsWithoutSides[j] = chars[i];
+            j++;
+        }
+        return charsWithoutSides;
     }
 
     private String collectCharsToString (char[] letters){
