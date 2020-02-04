@@ -11,7 +11,7 @@ import java.util.Arrays;
 
 public class Task5 {
     public static void main(String[] args) {
-        int[] a = {1, 3, 4, 7, 8, 9, 10, 2, 5, 12 };
+        int[] a = {3, 1, 7, 11, 8, 9, 10, 2, 0, 12 };
         System.out.println("Sorted array: ");
         System.out.println(Arrays.toString(sortInsertion(a)));
     }

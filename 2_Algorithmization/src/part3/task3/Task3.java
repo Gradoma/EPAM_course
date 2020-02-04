@@ -29,7 +29,7 @@ public class Task3 {
 
     private static int [] sortSelection (int [] array){
         for (int i = 0; i<array.length; i++){
-            int max = 0;
+            int max = array[i];
             int indexOfMax = 0;
             for (int j=i; j<array.length; j++){
                 if (array[j]>max){
